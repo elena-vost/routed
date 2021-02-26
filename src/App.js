@@ -10,32 +10,20 @@ class App extends Component {
     return (
       <div className="App">
         <nav className="App-nav">
-          <NavLink to="/dog">Dog</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-          <NavLink to="/">About</NavLink>
+          <NavLink exact activeClassName="active-link" to="/dog">
+            Dog
+          </NavLink>
+          <NavLink exact activeClassName="active-link" to="/contact">
+            Contact
+          </NavLink>
+          <NavLink exact activeClassName="active-link" to="/">
+            About
+          </NavLink>
         </nav>
         <Switch>
-          <Route
-            exact
-            activeClassName="active-link"
-            exact
-            path="/"
-            component={About}
-          />
-          <Route
-            exact
-            activeClassName="active-link"
-            exact
-            path="/dog"
-            component={Dog}
-          />
-          <Route
-            exact
-            activeClassName="active-link"
-            exact
-            path="/contact"
-            component={Contact}
-          />
+          <Route exact path="/" component={About} />
+          <Route exact path="/dog" component={Dog} />
+          <Route exact path="/contact" component={Contact} />
         </Switch>
       </div>
     );
