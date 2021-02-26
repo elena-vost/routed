@@ -9,6 +9,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <nav className="App-nav">
+          <a href="/dog">Dog</a>
+          <a href="/contact">Contact</a>
+          <a href="/">About</a>
+        </nav>
         <Switch>
           <Route exact path="/" component={About} />
           <Route exact path="/dog" component={Dog} />
