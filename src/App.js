@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Switch, NavLink } from "react-router-dom";
 import About from "./About";
 import Dog from "./Dog";
 import Contact from "./Contact";
@@ -10,9 +10,9 @@ class App extends Component {
     return (
       <div className="App">
         <nav className="App-nav">
-          <Link to="/dog">Dog</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/">About</Link>
+          <NavLink to="/dog">Dog</Link>
+          <NavLink to="/contact">Contact</Link>
+          <NavLink to="/">About</Link>
         </nav>
         <Switch>
           <Route exact path="/" component={About} />
